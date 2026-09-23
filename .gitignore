@@ -1,0 +1,11 @@
+# Arquivos locais de trabalho e prévias
+/tmp/
+/output/
+
+# Dependências e configurações locais
+/node_modules/
+/dist/
+/.env
+/.env.*
+!.env.example
+*.pem
