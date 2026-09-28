@@ -1,10 +1,22 @@
 # Arquivos locais de trabalho e prévias
 /tmp/
 /output/
+/outputs/
+/previews-temporarias/
+/%SystemDrive%/
+/graphify-out/
+/anti-slop/
+/docs/superpowers/
 
 # Dependências e configurações locais
 /node_modules/
 /dist/
+/.cache/
+*.log
+*.pdf
+*.xlsx
+*.xls
+*.csv
 /.env
 /.env.*
 !.env.example

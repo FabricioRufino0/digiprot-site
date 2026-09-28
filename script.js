@@ -1,159 +1,83 @@
-const demoPages = [...document.querySelectorAll(".demo-page")];
-const demoControls = [...document.querySelectorAll("[data-demo-select]")];
-const demoViewport = document.querySelector("#demo-viewport");
-const demoCount = document.querySelector("#demo-count");
-const demoProgress = document.querySelector(".demo-progress");
-const showcase = document.querySelector(".showcase");
+const pages = [...document.querySelectorAll(".demo-page")];
+const controls = [...document.querySelectorAll("[data-demo-select]")];
+const viewport = document.querySelector("#demo-viewport");
+const count = document.querySelector("#demo-count");
+const pagination = document.querySelector(".demo-pagination");
+const previousDemo = document.querySelector("[data-demo-prev]");
+const nextDemo = document.querySelector("[data-demo-next]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-let currentDemo = 0;
-let isVisible = false;
-let isHovered = false;
-let hasFocus = false;
-let scrollTimer;
-let nextTimer;
-let manualTimer;
-
-function clearDemoTimers() {
-  window.clearTimeout(scrollTimer);
-  window.clearTimeout(nextTimer);
-  window.clearTimeout(manualTimer);
-  demoProgress.classList.remove("is-running");
+const heroFlow = document.querySelector(".hero-flow");
+let heroVisible = false;
+function syncHeroFlow() {
+  const active = !reducedMotion.matches && heroVisible && !document.hidden;
+  if (active) heroFlow.unpauseAnimations();
+  else heroFlow.pauseAnimations();
 }
-
-function scrollActiveDemo() {
-  if (!reducedMotion.matches) {
-    demoPages[currentDemo].classList.add("is-scrolling");
-  }
+if (heroFlow?.pauseAnimations && "IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => {
+    heroVisible = entry.isIntersecting;
+    syncHeroFlow();
+  }).observe(document.querySelector(".hero"));
+  reducedMotion.addEventListener("change", syncHeroFlow);
+  document.addEventListener("visibilitychange", syncHeroFlow);
+  syncHeroFlow();
 }
+let activeDemo = 0;
+const dots = pages.map((_, index) => {
+  const dot = document.createElement("span");
+  pagination.append(dot);
+  return dot;
+});
 
-function updateTravel() {
-  const page = demoPages[currentDemo];
-  const travel = Math.max(0, page.scrollHeight - demoViewport.clientHeight);
-  page.style.setProperty("--travel", "-" + travel + "px");
-}
-
-function scheduleDemo() {
-  window.clearTimeout(scrollTimer);
-  window.clearTimeout(nextTimer);
-  if (
-    !isVisible ||
-    isHovered ||
-    hasFocus ||
-    document.hidden ||
-    reducedMotion.matches
-  ) {
-    return;
-  }
-  demoProgress.classList.remove("is-running");
-  void demoProgress.offsetWidth;
-  demoProgress.classList.add("is-running");
-  scrollTimer = window.setTimeout(scrollActiveDemo, 1100);
-  nextTimer = window.setTimeout(
-    () => showDemo((currentDemo + 1) % demoPages.length),
-    7600,
-  );
-}
-
-function showDemo(index, manual = false) {
-  clearDemoTimers();
-  currentDemo = index;
-  demoPages.forEach((page, position) => {
-    page.hidden = position !== index;
-    page.classList.remove("is-scrolling");
+function showDemo(index) {
+  activeDemo = (index + pages.length) % pages.length;
+  pages.forEach((page, position) => {
+    const offset = (position - activeDemo + pages.length) % pages.length;
+    page.dataset.position = offset === 0 ? "current" : offset === 1 ? "next" : offset === pages.length - 1 ? "previous" : "far";
+    page.setAttribute("aria-hidden", String(position !== activeDemo));
   });
-  demoControls.forEach((control, position) => {
-    control.classList.toggle("is-active", position === index);
-    control.setAttribute("aria-pressed", String(position === index));
+  controls.forEach((button, position) => {
+    button.classList.toggle("is-active", position === activeDemo);
+    button.setAttribute("aria-pressed", String(position === activeDemo));
   });
-  demoCount.textContent = String(index + 1).padStart(2, "0") + " / 03";
-
-  updateTravel();
-
-  if (manual) {
-    manualTimer = window.setTimeout(scrollActiveDemo, 650);
-  } else {
-    scheduleDemo();
-  }
+  dots.forEach((dot, position) => dot.classList.toggle("is-active", position === activeDemo));
+  count.textContent = `${String(activeDemo + 1).padStart(2, "0")} / ${String(pages.length).padStart(2, "0")}`;
 }
 
-demoControls.forEach((control) =>
-  control.addEventListener("click", () => {
-    showDemo(Number(control.dataset.demoSelect), true);
-  }),
-);
-showcase.addEventListener("mouseenter", () => {
-  isHovered = true;
-  window.clearTimeout(scrollTimer);
-  window.clearTimeout(nextTimer);
-  demoProgress.classList.remove("is-running");
+controls.forEach((button) => button.addEventListener("click", () => showDemo(Number(button.dataset.demoSelect))));
+previousDemo.addEventListener("click", () => showDemo(activeDemo - 1));
+nextDemo.addEventListener("click", () => showDemo(activeDemo + 1));
+viewport.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") showDemo(activeDemo - 1);
+  if (event.key === "ArrowRight") showDemo(activeDemo + 1);
 });
-showcase.addEventListener("mouseleave", () => {
-  isHovered = false;
-  scheduleDemo();
-});
-showcase.addEventListener("focusin", () => {
-  hasFocus = true;
-  window.clearTimeout(scrollTimer);
-  window.clearTimeout(nextTimer);
-  demoProgress.classList.remove("is-running");
-});
-showcase.addEventListener("focusout", (event) => {
-  if (!showcase.contains(event.relatedTarget)) {
-    hasFocus = false;
-    scheduleDemo();
-  }
-});
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    clearDemoTimers();
-  } else {
-    scheduleDemo();
-  }
-});
-reducedMotion.addEventListener("change", () => {
-  clearDemoTimers();
-  if (reducedMotion.matches) {
-    demoPages[currentDemo].classList.remove("is-scrolling");
-  } else {
-    scheduleDemo();
-  }
-});
-
-const demoObserver = new IntersectionObserver(
-  ([entry]) => {
-    isVisible = entry.isIntersecting;
-    if (isVisible) {
-      scheduleDemo();
-    } else {
-      clearDemoTimers();
-    }
-  },
-  { threshold: 0.45 },
-);
-demoObserver.observe(showcase);
+let touchStartX = 0;
+viewport.addEventListener("touchstart", (event) => { touchStartX = event.changedTouches[0].screenX; }, { passive: true });
+viewport.addEventListener("touchend", (event) => {
+  const delta = event.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(delta) > 45) showDemo(activeDemo + (delta < 0 ? 1 : -1));
+}, { passive: true });
+pages.forEach((page, index) => page.addEventListener("click", () => {
+  if (index !== activeDemo) showDemo(index);
+}));
 showDemo(0);
-window.addEventListener("resize", updateTravel);
-document.fonts.ready.then(updateTravel);
 
 const menuToggle = document.querySelector(".menu-toggle");
-const mainNav = document.querySelector(".main-nav");
+const nav = document.querySelector(".main-nav");
+function closeMenu() {
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Abrir menu");
+}
 menuToggle.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+  const open = nav.classList.toggle("is-open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
 });
-mainNav.querySelectorAll("a").forEach((link) =>
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Abrir menu");
-  }),
-);
+nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && mainNav.classList.contains("is-open")) {
-    mainNav.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Abrir menu");
+  if (event.key === "Escape" && nav.classList.contains("is-open")) {
+    closeMenu();
     menuToggle.focus();
   }
 });

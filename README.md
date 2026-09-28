@@ -1,19 +1,66 @@
 # Site institucional DIGIPROT
 
-Home estática e responsiva, criada a partir das notas do projeto no segundo cérebro, da proposta visual da Home e da logo fornecida em PNG. O mockup animado apresenta três demonstrações conceituais (climatização, confeitaria e contabilidade); a seção de modelos mantém os cinco segmentos previstos. Nenhuma demonstração representa cliente ou projeto entregue.
+Landing page estática da DIGIPROT, criada para apresentar o serviço e direcionar o visitante aos canais comercial e técnico no WhatsApp.
 
-As fotografias ilustrativas usadas no mockup foram geradas com o recurso integrado de imagens e salvas em assets/demo-climatizacao.webp e assets/demonstracoes-conceituais.webp. Prompts: (1) tríptico editorial sem marcas com climatização residencial, confeitaria artesanal e mesa de escritório contábil; (2) foto aproximada de mãos ajustando um ar-condicionado em ambiente neutro, sem referência geográfica. A logo em assets/digiprot-logo.png é cópia integral do arquivo fornecido.
+O site usa HTML, CSS e JavaScript sem framework ou dependências de interface. A seção de exemplos reúne quatro páginas conceituais, cada uma com estrutura e identidade próprias:
+
+- climatização, com foco em diagnóstico e pedido de avaliação;
+- confeitaria, com foco em produtos e encomendas;
+- contabilidade, organizada por momento da empresa;
+- loja de bicicletas, com catálogo e agendamento de oficina.
+
+Os exemplos não representam clientes ou projetos entregues.
 
 ## Prévia local
 
-Na pasta do projeto, inicie um servidor estático (por exemplo, `python -m http.server 4173`) e abra `http://localhost:4173`.
+Na pasta do projeto, execute:
 
-## Antes de publicar
+```powershell
+python -m http.server 4173
+```
 
-- Confirmar o domínio público para gerar `sitemap.xml` e URLs canônicas.
-- O WhatsApp principal é `+55 61 98668-4723`; o segundo canal exibido é `+55 61 99560-4114`.
-- Definir dados institucionais e legais que deverão constar no site.
-- Configurar Analytics 4 e Search Console nas contas sob controle da DIGIPROT e decidir a política de consentimento antes de incluir qualquer script de medição.
-- Revisar o conteúdo final e validar os links externos após apontar o domínio e publicar.
+Depois, abra `http://localhost:4173`.
 
-Os arquivos não incluem preços, depoimentos, números de resultados, portfólio fictício ou promessas de desempenho.
+## Estrutura
+
+- `index.html`: conteúdo, metadados e estrutura semântica.
+- `styles.css`: identidade visual, animação, carrossel e responsividade.
+- `script.js`: menu móvel, movimento do Hero e navegação dos exemplos.
+- `assets/hero-digiprot-v2.webp`: imagem usada no Hero animado.
+- `assets/hero-digiprot.webp`: versão estática preservada como referência local.
+- `assets/hero-wave-map.svg`: mapa de deslocamento do movimento do Hero.
+- `assets/`: também contém a logo e as imagens conceituais dos exemplos.
+- `robots.txt`: autorização de rastreamento para a página pública.
+
+## Movimento e acessibilidade
+
+A figura abstrata do Hero usa um filtro SVG local. Quando o navegador oferece controle de tempo para a animação SVG, o efeito pausa fora da tela e com a aba oculta. Com `prefers-reduced-motion: reduce`, a figura permanece estática e as transições são desativadas.
+
+A página também oferece link para pular ao conteúdo, foco visível, menu móvel operável por teclado e controles nomeados para o carrossel. Os números dos canais não aparecem na interface: os botões identificam o setor comercial e o suporte técnico.
+
+## Verificação antes de publicar
+
+Fluxo mínimo usado no projeto:
+
+1. conferir a sintaxe de `script.js` com `node --check script.js`;
+2. executar `git diff --check`;
+3. servir a página localmente e confirmar resposta HTTP 200;
+4. testar menu, âncoras, links e carrossel com mouse, toque e teclado;
+5. revisar desktop, tablet, celular e `prefers-reduced-motion`;
+6. verificar console, imagens, rolagem horizontal, IDs duplicados e destinos das âncoras;
+7. revisar o diff antes do commit e do push.
+
+## SEO e publicação
+
+O HTML contém idioma, título, descrição, Open Graph básico, conteúdo semântico e um único `h1`. O arquivo `robots.txt` permite rastreamento.
+
+Antes do primeiro deploy ainda é necessário:
+
+- definir o domínio para adicionar canonical, `og:url`, imagem social absoluta e `sitemap.xml`;
+- confirmar dados públicos da empresa antes de criar JSON-LD;
+- confirmar favicon final, paleta oficial, informações legais e política de privacidade;
+- definir contas, consentimento e eventos antes de instalar Analytics;
+- configurar Search Console depois que o domínio estiver ativo;
+- repetir as verificações de status HTTP, metadados, links e desempenho no endereço publicado.
+
+Não há formulário, cookies de medição ou scripts de Analytics nesta versão.

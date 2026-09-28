@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2000" viewBox="0 0 2400 2000">
+  <defs>
+    <linearGradient id="wave" x1="0" x2="400" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      <stop offset="0" stop-color="rgb(128,128,128)"/>
+      <stop offset=".0625" stop-color="rgb(136,162,128)"/>
+      <stop offset=".125" stop-color="rgb(142,192,128)"/>
+      <stop offset=".1875" stop-color="rgb(146,211,128)"/>
+      <stop offset=".25" stop-color="rgb(148,218,128)"/>
+      <stop offset=".3125" stop-color="rgb(146,211,128)"/>
+      <stop offset=".375" stop-color="rgb(142,192,128)"/>
+      <stop offset=".4375" stop-color="rgb(136,162,128)"/>
+      <stop offset=".5" stop-color="rgb(128,128,128)"/>
+      <stop offset=".5625" stop-color="rgb(120,94,128)"/>
+      <stop offset=".625" stop-color="rgb(114,64,128)"/>
+      <stop offset=".6875" stop-color="rgb(110,45,128)"/>
+      <stop offset=".75" stop-color="rgb(108,38,128)"/>
+      <stop offset=".8125" stop-color="rgb(110,45,128)"/>
+      <stop offset=".875" stop-color="rgb(114,64,128)"/>
+      <stop offset=".9375" stop-color="rgb(120,94,128)"/>
+      <stop offset="1" stop-color="rgb(128,128,128)"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#wave)" d="M0 0h2400v2000H0z"/>
+</svg>
