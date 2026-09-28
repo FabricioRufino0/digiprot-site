@@ -6,10 +6,11 @@ const pagination = document.querySelector(".demo-pagination");
 const previousDemo = document.querySelector("[data-demo-prev]");
 const nextDemo = document.querySelector("[data-demo-next]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const compactViewport = window.matchMedia("(max-width: 950px)");
 const heroFlow = document.querySelector(".hero-flow");
 let heroVisible = false;
 function syncHeroFlow() {
-  const active = !reducedMotion.matches && heroVisible && !document.hidden;
+  const active = !reducedMotion.matches && !compactViewport.matches && heroVisible && !document.hidden;
   if (active) heroFlow.unpauseAnimations();
   else heroFlow.pauseAnimations();
 }
@@ -19,6 +20,7 @@ if (heroFlow?.pauseAnimations && "IntersectionObserver" in window) {
     syncHeroFlow();
   }).observe(document.querySelector(".hero"));
   reducedMotion.addEventListener("change", syncHeroFlow);
+  compactViewport.addEventListener("change", syncHeroFlow);
   document.addEventListener("visibilitychange", syncHeroFlow);
   syncHeroFlow();
 }
