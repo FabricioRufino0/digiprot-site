@@ -1,0 +1,27 @@
+# DIGIPROT
+
+> Design e desenvolvimento de sites para o seu negócio.
+
+O endereço oficial é https://digiprot.com.br/. A DIGIPROT cria sites com a identidade do negócio, apresentação de serviços e canais de contato. O escopo de hospedagem, integrações, SEO, medição e suporte é definido na proposta.
+
+## Páginas
+
+- [Página principal em Markdown](https://digiprot.com.br/index.md): serviços, clientes e contato. Página para pessoas: https://digiprot.com.br/.
+- [Clientes](https://digiprot.com.br/#projetos): Nandices Confeitaria e Sobradinho Injeção Diesel.
+- [O que fazemos](https://digiprot.com.br/#entrega): design e desenvolvimento de sites.
+- [Exemplos em Markdown](https://digiprot.com.br/exemplos/index.md): estudos conceituais de climatização, confeitaria, contabilidade e bicicletas. São demonstrações de design, não projetos entregues. Página para pessoas: https://digiprot.com.br/exemplos/.
+
+## Sites de clientes
+
+- [Nandices Confeitaria](https://nandicesconfeitaria.com.br/): confeitaria artesanal.
+- [Sobradinho Injeção Diesel](https://sobradinhodiesel.com.br/): oficina especializada.
+
+## Contato
+
+- [Comercial](https://wa.me/5561986684723): conversar sobre um site.
+- [Suporte técnico](https://wa.me/5561995604114): atendimento de suporte.
+
+## Optional
+
+- [Sitemap](https://digiprot.com.br/sitemap.xml): páginas públicas do site.
+- [Robots](https://digiprot.com.br/robots.txt): regras de rastreamento.

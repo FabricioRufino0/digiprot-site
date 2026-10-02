@@ -1,0 +1,29 @@
+:root {
+  color-scheme: dark;
+  --background: #090c12;
+  --foreground: #f2f4f6;
+  --surface: #111a28;
+  --muted-foreground: #aab4c3;
+  --primary: #ff4d6d;
+  --primary-foreground: #090c12;
+  --accent: #39d6c5;
+  --accent-foreground: #090c12;
+  --border: #283342;
+  --control-border: #667385;
+  --ring: #39d6c5;
+  --radius: 0.75rem;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: 'Manrope', sans-serif;
+}

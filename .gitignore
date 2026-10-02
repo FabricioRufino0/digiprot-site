@@ -12,6 +12,8 @@
 /node_modules/
 /dist/
 /.cache/
+/.wrangler/
+/.playwright-mcp/
 *.log
 *.pdf
 *.xlsx
