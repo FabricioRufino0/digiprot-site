@@ -1,0 +1,302 @@
+[
+  {
+    "name": "before-1",
+    "date": "2026-10-02T13:04:54.404Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1662.4753,
+      "largest-contentful-paint": 2796.4753,
+      "total-blocking-time": 28,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 399077
+    }
+  },
+  {
+    "name": "before-2",
+    "date": "2026-10-02T13:05:41.627Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1809.5798,
+      "largest-contentful-paint": 2793.5797999999995,
+      "total-blocking-time": 30,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 399077
+    }
+  },
+  {
+    "name": "css-1",
+    "date": "2026-10-02T13:09:05.517Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1668.7026,
+      "largest-contentful-paint": 2733.2026,
+      "total-blocking-time": 52.5,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 398534
+    }
+  },
+  {
+    "name": "css-2",
+    "date": "2026-10-02T13:10:22.016Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1662.2881,
+      "largest-contentful-paint": 2729.2881,
+      "total-blocking-time": 38.5,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 398534
+    }
+  },
+  {
+    "name": "deferred-1",
+    "date": "2026-10-02T13:12:07.702Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1515.4988,
+      "largest-contentful-paint": 2728.4988000000003,
+      "total-blocking-time": 18,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 398609
+    }
+  },
+  {
+    "name": "final-1",
+    "date": "2026-10-02T13:16:20.756Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1659.2337,
+      "largest-contentful-paint": 2719.7336999999998,
+      "total-blocking-time": 11,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 369920
+    }
+  },
+  {
+    "name": "final-2",
+    "date": "2026-10-02T13:17:59.060Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1658.9647,
+      "largest-contentful-paint": 2718.4646999999995,
+      "total-blocking-time": 8,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 369920
+    }
+  },
+  {
+    "name": "final-3",
+    "date": "2026-10-02T13:24:28.205Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1660.5366,
+      "largest-contentful-paint": 2722.0366,
+      "total-blocking-time": 11,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 369924
+    }
+  },
+  {
+    "name": "desktop",
+    "date": "2026-10-02T13:29:12.188Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      }
+    },
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 369.8525,
+      "largest-contentful-paint": 565.3525,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 326389
+    }
+  },
+  {
+    "name": "examples-regression",
+    "date": "2026-10-02T13:29:48.262Z",
+    "version": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1657.0405,
+      "largest-contentful-paint": 2566.5405,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 353150
+    }
+  }
+]

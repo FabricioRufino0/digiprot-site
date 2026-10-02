@@ -1,0 +1,250 @@
+[
+  {
+    "name": "home-before",
+    "url": "http://127.0.0.1:5181/",
+    "date": "2026-10-02T12:44:04.207Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 85,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 2412.6348000000003,
+      "largest-contentful-paint": 3926.1348,
+      "total-blocking-time": 30.5,
+      "cumulative-layout-shift": 0.000009238619565168936,
+      "total-byte-weight": 779178
+    }
+  },
+  {
+    "name": "examples-before",
+    "url": "http://127.0.0.1:5181/exemplos/",
+    "date": "2026-10-02T12:45:52.360Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 83,
+      "accessibility": 98,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 2260.8326,
+      "largest-contentful-paint": 4285.8326,
+      "total-blocking-time": 4,
+      "cumulative-layout-shift": 0.016845948861782006,
+      "total-byte-weight": 621779
+    }
+  },
+  {
+    "name": "home-after",
+    "url": "http://127.0.0.1:5181/",
+    "date": "2026-10-02T12:47:31.892Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 87,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1807.832,
+      "largest-contentful-paint": 3843.3320000000003,
+      "total-blocking-time": 32,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 779679
+    }
+  },
+  {
+    "name": "examples-after",
+    "url": "http://127.0.0.1:5181/exemplos/",
+    "date": "2026-10-02T12:48:06.528Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 91,
+      "accessibility": 98,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1811.3186,
+      "largest-contentful-paint": 3181.8185999999996,
+      "total-blocking-time": 59.5,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 622168
+    }
+  },
+  {
+    "name": "home-final-1",
+    "url": "http://127.0.0.1:5181/",
+    "date": "2026-10-02T12:51:37.986Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1810.8587,
+      "largest-contentful-paint": 3625.3587,
+      "total-blocking-time": 48,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 507316
+    }
+  },
+  {
+    "name": "home-final-2",
+    "url": "http://127.0.0.1:5181/",
+    "date": "2026-10-02T12:53:22.086Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1809.9982,
+      "largest-contentful-paint": 3621.4982,
+      "total-blocking-time": 38.5,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 507316
+    }
+  },
+  {
+    "name": "examples-final-1",
+    "url": "http://127.0.0.1:5181/exemplos/",
+    "date": "2026-10-02T12:52:24.678Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1811.5456,
+      "largest-contentful-paint": 2722.0456000000004,
+      "total-blocking-time": 3,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 349822
+    }
+  },
+  {
+    "name": "live",
+    "url": "https://digiprot.com.br/",
+    "date": "2026-10-02T12:54:21.397Z",
+    "lighthouse": "13.5.0",
+    "settings": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    "scores": {
+      "performance": 83,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 2632.223,
+      "largest-contentful-paint": 3772.8425,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "total-byte-weight": 447421
+    }
+  }
+]
