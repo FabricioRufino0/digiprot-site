@@ -48,6 +48,12 @@ Há rolagem nativa, foco visível, link para pular ao conteúdo, menu móvel nat
 
 O domínio canônico está configurado como `https://digiprot.com.br/`. O build inclui canonical por página, Open Graph, Twitter Cards, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt` e versões Markdown das duas páginas. Rode `npm run build` e `npm run check:seo` antes de publicar.
 
-Publique o conteúdo de `dist/`, incluindo `/exemplos/`. `public/_redirects`, `public/_headers` e `404.html` incluem regras para hospedagens compatíveis com Cloudflare Pages. Outro provedor precisa aplicar regras equivalentes. O redirecionamento de `www` para o domínio oficial deve ser configurado na hospedagem ou CDN. Consulte `docs/seo-performance-audit.md` para os resultados e verificações após publicação.
+O domínio de produção usa o Worker `digiprot-site`, conectado à branch `main` deste repositório pelo Cloudflare Workers Builds. A configuração de produção é:
 
-Os testes registrados nos relatórios foram realizados em builds locais. O push para uma branch não confirma a publicação do site.
+- Diretório raiz: `/`.
+- Build: `npm run build`.
+- Deploy: `npx wrangler@4.147.0 deploy --name digiprot-site --assets ./dist --compatibility-date 2026-10-02`.
+
+O deploy publica o conteúdo de `dist/`, incluindo `/exemplos/`, `_redirects`, `_headers` e `404.html`. O caminho explícito evita a autodetecção do Wrangler, que falha ao analisar este `vite.config.js`. Consulte `docs/seo-performance-audit.md` para as verificações após publicação.
+
+Um push para `main` dispara a publicação automática. Confirme o sucesso no Cloudflare e confira o domínio; um push aceito pelo GitHub não garante que o deploy tenha terminado.
