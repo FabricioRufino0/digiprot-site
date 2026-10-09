@@ -83,4 +83,7 @@ const scriptPolicy = contentSecurityPolicy?.match(/(?:^|;)\s*script-src\s+([^;]+
 assert.ok(scriptPolicy.includes("'self'"), 'CSP should allow local scripts')
 assert.ok(scriptPolicy.includes(`'sha256-${bootstrapHash}'`), 'CSP should allow the existing bootstrap')
 assert.doesNotMatch(scriptPolicy, /'unsafe-inline'/, 'CSP must not allow arbitrary inline scripts')
+const workerConfig = await readFile('wrangler.toml', 'utf8')
+assert.match(workerConfig, /html_handling = "auto-trailing-slash"/)
+assert.match(workerConfig, /not_found_handling = "404-page"/)
 console.log('SEO OK: 2 páginas pré-renderizadas, canonical, metadados, JSON-LD, assets, robots, sitemap, llms e 404.')
