@@ -22,6 +22,6 @@ const jsSizes = await Promise.all(assets.filter(file => file.endsWith('.js')).ma
 assert.ok(jsSizes.reduce((sum, size) => sum + size, 0) < 200 * KiB, 'Total JavaScript exceeds 200 KiB gzip')
 const fonts = await Promise.all(assets.filter(file => file.endsWith('.woff2')).map(file => stat('dist/assets/' + file)))
 assert.ok(fonts.reduce((sum, file) => sum + file.size, 0) < 65 * KiB, 'Fonts exceed 65 KiB')
-assert.ok((await stat('dist/assets/identity/favicon.png')).size < 8 * KiB, 'Favicon exceeds 8 KiB')
+assert.ok((await stat('dist/assets/identity/favicon-square.png')).size < 8 * KiB, 'Favicon exceeds 8 KiB')
 assert.ok((await stat('dist/assets/identity/digiprot-logo.webp')).size < 30 * KiB, 'Display logo exceeds 30 KiB')
 console.log('Asset budgets OK: both routes, JavaScript, fonts, logo, favicon and responsive captures.')

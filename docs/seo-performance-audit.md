@@ -17,7 +17,7 @@ Data: 2 de outubro de 2026. Domínio confirmado pelo proprietário: https://digi
 - `_headers` define MIME e UTF-8 dos arquivos de rastreamento e Markdown. As cópias Markdown recebem `X-Robots-Tag: noindex`, preservando o HTML como resultado de busca.
 - `404.html` tem mensagem, retorno à principal e `noindex`. Impede fallback indiscriminado para a principal em Cloudflare Pages.
 - Fontes locais usadas acima da dobra recebem preload. O Vite converte os caminhos de origem para arquivos com hash no build.
-- Logo usado na interface e favicon agora reutilizam o WebP de 600 × 200 já existente: 23.208 bytes em vez de 295.614 bytes, redução de 92%. O PNG original permanece disponível para compartilhamento e referência.
+- O logo da interface usa o WebP de 600 × 200 já existente: 23.208 bytes em vez de 295.614 bytes, redução de 92%. Ajuste de 9 de outubro: o favicon usa só o símbolo da marca em PNG quadrado de 96 × 96 px, com 7.449 bytes.
 
 ## Verificação
 

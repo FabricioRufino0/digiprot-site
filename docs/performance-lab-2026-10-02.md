@@ -61,7 +61,7 @@ O salto de layout da principal foi eliminado quase por completo ao reservar a ce
 4. **Menos JavaScript inicial.** O helper local usa `clsx`, sem carregar o mecanismo de resolução de conflitos Tailwind que esses componentes não utilizam. Essa mudança isolada economizou aproximadamente 8,5 KB gzip. O JavaScript inicial da principal passou de cerca de 180 KiB para 143 KiB gzip no conjunto final; exemplos: 130,6 KiB.
 5. **Menos preparação fora da tela.** Entradas GSAP e câmeras dos projetos usam `immediateRender: false`. A barra de progresso usa scroll timeline CSS quando suportada, com fallback GSAP. Os loops do hero já param fora da tela, com a aba oculta ou pela pausa manual.
 6. **CSS inicial disponível no HTML.** A principal incorpora o stylesheet pequeno na pré-renderização, conforme a alteração paralela e seu limite de 48 KiB. O CSS da última build verificada tem 32,2 KiB.
-7. **Favicon pequeno.** PNG de 96 × 32 px, com 2.055 bytes. O logo original continua preservado; o logo exibido usa WebP de 23.208 bytes. O PNG original continua disponível para compartilhamento.
+7. **Favicon pequeno.** Atualização de 9 de outubro: PNG quadrado de 96 × 96 px, com 7.449 bytes, usando apenas o símbolo da marca. O logo exibido usa WebP de 23.208 bytes.
 8. **Cache por tipo de asset.** `_headers` configura um ano com `immutable` para JS, CSS e fontes com hash; imagens de nome estável recebem um dia. Vite preview não aplica esses cabeçalhos; nenhum ganho de cache publicado foi contabilizado neste ensaio.
 
 As experiências isoladas de reserva da cena e redimensionamento de imagens apresentaram ganhos antes da integração final. Não foram acrescentadas bibliotecas, camadas de memoização ou novos efeitos para justificar a otimização.
