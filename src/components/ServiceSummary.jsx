@@ -25,7 +25,7 @@ export default function ServiceSummary() {
       <div className="services-layout">
         <div className="services-intro">
           <h2 id="services-title">Seu negócio,<br />bem apresentado.</h2>
-          <p>A DIGIPROT cria sites com a identidade do seu negócio, serviços bem organizados e formas claras de contato pelo celular ou computador. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.</p>
+          <p>Sites para sua empresa: identidade visual, serviços claros e contato pelo celular ou computador. Veja ideias da DIGIPROT. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.</p>
         </div>
         <ul className="service-details">
           {services.map((service, index) => (

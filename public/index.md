@@ -2,7 +2,7 @@
 
 Página oficial: https://digiprot.com.br/
 
-A DIGIPROT cria sites com a identidade do seu negócio, serviços bem organizados e formas claras de contato pelo celular ou computador. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.
+Sites para sua empresa: identidade visual, serviços claros e contato pelo celular ou computador. Veja ideias da DIGIPROT. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.
 
 ## Sites produzidos para clientes
 

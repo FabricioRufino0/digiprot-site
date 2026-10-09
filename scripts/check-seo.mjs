@@ -82,6 +82,7 @@ const bootstrapHash = createHash('sha256').update(inlineBootstrap).digest('base6
 const scriptPolicy = contentSecurityPolicy?.match(/(?:^|;)\s*script-src\s+([^;]+)/)?.[1] ?? ''
 assert.ok(scriptPolicy.includes("'self'"), 'CSP should allow local scripts')
 assert.ok(scriptPolicy.includes(`'sha256-${bootstrapHash}'`), 'CSP should allow the existing bootstrap')
+assert.ok(scriptPolicy.includes('https://static.cloudflareinsights.com'), 'CSP should allow the Cloudflare Web Analytics beacon')
 assert.doesNotMatch(scriptPolicy, /'unsafe-inline'/, 'CSP must not allow arbitrary inline scripts')
 const workerConfig = await readFile('wrangler.toml', 'utf8')
 assert.match(workerConfig, /html_handling = "auto-trailing-slash"/)

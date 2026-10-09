@@ -26,7 +26,7 @@ export default function ConceptGallery({ standalone = false }) {
       <div className="section-heading">
         <Heading id="concepts-title">Exemplos para<br />inspirar seu site.</Heading>
         <p>{standalone
-          ? 'Quatro estudos conceituais da DIGIPROT mostram sites para climatização, confeitaria, contabilidade e bicicletas. Veja ideias para organizar produtos e serviços. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.'
+          ? 'Quatro estudos conceituais de sites: climatização, confeitaria, contabilidade e bicicletas. Veja ideias para serviços e produtos. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.'
           : 'Veja como diferentes negócios podem apresentar seus produtos e serviços em um site. Passe pelas prévias e encontre ideias para o seu.'}</p>
       </div>
 

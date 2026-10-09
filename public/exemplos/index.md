@@ -2,7 +2,7 @@
 
 Página oficial: https://digiprot.com.br/exemplos/
 
-Quatro estudos conceituais da DIGIPROT mostram sites para climatização, confeitaria, contabilidade e bicicletas. Veja ideias para organizar produtos e serviços. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.
+Quatro estudos conceituais de sites: climatização, confeitaria, contabilidade e bicicletas. Veja ideias para serviços e produtos. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.
 
 ## Estudos
 
