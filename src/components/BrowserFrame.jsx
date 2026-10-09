@@ -9,6 +9,6 @@ export default function BrowserFrame({ project, mobile = false, eager = false, c
     : eager ? '(min-width: 900px) 45vw, 65vw' : '(min-width: 900px) 48vw, 100vw'
   return <div className={cn('browser-frame', mobile && 'browser-frame-mobile', className)}>
     <div className="browser-bar" aria-hidden="true"><span className="browser-dots"><i /><i /><i /></span><span>{project.domain}</span><span className="browser-bar-end" /></div>
-    <img src={source} srcSet={srcSet} sizes={sizes} alt={mobile ? `Versão para celular. ${project.alt}` : project.alt} width={originalWidth} height={mobile ? 844 : 960} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager && !mobile ? 'high' : 'auto'} decoding="async" />
+    <img src={source} srcSet={srcSet} sizes={sizes} alt={mobile ? `Versão para celular. ${project.alt}` : project.alt} width={300} height={mobile ? 649 : 200} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager && !mobile ? 'high' : 'auto'} decoding="async" />
   </div>
 }

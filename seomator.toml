@@ -1,0 +1,3 @@
+[project]
+name = "digiprot-site"
+domains = ["https://digiprot.com.br"]

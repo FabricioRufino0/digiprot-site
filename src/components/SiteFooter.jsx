@@ -9,7 +9,7 @@ export default function SiteFooter({ currentPage = 'home' }) {
     <div className="footer-top">
       <div className="footer-signoff">
         <a className="brand footer-brand" href={`${home}#inicio`} aria-label="DIGIPROT, voltar ao início">
-          <img src="/assets/identity/digiprot-logo.webp" width="600" height="200" alt="DIGIPROT" loading="lazy" />
+          <img src="/assets/identity/digiprot-logo.webp" width="300" height="100" alt="DIGIPROT" loading="lazy" />
         </a>
         <p className="footer-description">Sites com a identidade do seu negócio. Feitos para quem vai usar.</p>
       </div>

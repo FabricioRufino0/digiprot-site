@@ -25,7 +25,9 @@ export default function ConceptGallery({ standalone = false }) {
     <section className={`concepts shell section-space${standalone ? ' concepts-standalone' : ''}`} id="modelos" aria-labelledby="concepts-title">
       <div className="section-heading">
         <Heading id="concepts-title">Exemplos para<br />inspirar seu site.</Heading>
-        <p>Veja como diferentes negócios podem apresentar seus produtos e serviços em um site. Passe pelas prévias e encontre ideias para o seu.</p>
+        <p>{standalone
+          ? 'Quatro estudos conceituais da DIGIPROT mostram sites para climatização, confeitaria, contabilidade e bicicletas. Veja ideias para organizar produtos e serviços. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.'
+          : 'Veja como diferentes negócios podem apresentar seus produtos e serviços em um site. Passe pelas prévias e encontre ideias para o seu.'}</p>
       </div>
 
       <div className="concept-carousel" role="region" aria-roledescription="carrossel" aria-label="Exemplos de sites para diferentes negócios">
@@ -115,16 +117,32 @@ export default function ConceptGallery({ standalone = false }) {
         </div>
       </div>
 
+      {standalone && (
+        <section className="concept-explanations" aria-labelledby="concept-details-title">
+          <h2 id="concept-details-title">O que cada estudo explora?</h2>
+          <ul className="concept-details">
+            {concepts.map(concept => (
+              <li key={concept.id}>
+                <h3>{concept.name}</h3>
+                <p>{concept.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {standalone && <a className="examples-client-link" href="/#projetos">Conheça os sites feitos para nossos clientes <ArrowUpRight aria-hidden="true" /></a>}
       <noscript>
-        <div className="nojs-concepts">
+        <ul className="nojs-concepts">
           {concepts.map(concept => (
-            <figure key={concept.id}>
-              <img src={concept.previewImage} alt={concept.alt} width={concept.width} height={concept.height} loading="lazy" />
-              <figcaption><ItemHeading>{concept.name}</ItemHeading><p>Exemplo de demonstração. {concept.summary}</p></figcaption>
-            </figure>
+            <li key={concept.id}>
+              <figure>
+                <img src={concept.previewImage} alt={concept.alt} width={concept.width} height={concept.height} loading="lazy" />
+                <figcaption><ItemHeading>{concept.name}</ItemHeading><p>Exemplo de demonstração. {concept.summary}</p></figcaption>
+              </figure>
+            </li>
           ))}
-        </div>
+        </ul>
       </noscript>
     </section>
   )

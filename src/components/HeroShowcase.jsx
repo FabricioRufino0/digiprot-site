@@ -145,7 +145,7 @@ export default function HeroShowcase() {
     <section className="hero shell" aria-labelledby="hero-title">
       <div className="hero-copy"><h1 id="hero-title" aria-label="Seu negócio em foco."><span className="hero-word-mask"><span className="hero-word">Seu negócio</span></span><span className="hero-word-mask"><span className="hero-word">em foco<span className="focus-dot">.</span></span></span></h1><p>Sites com a identidade do seu negócio.<br className="desktop-break" /> Feitos para quem vai usar.</p><div className="hero-actions"><a className="action action-primary" href="#projetos">Ver clientes <ArrowRight aria-hidden="true" /></a><a className="action action-outline" href={commercialUrl} target="_blank" rel="noopener noreferrer">Falar com a DIGIPROT</a></div></div>
       <div className="hero-art">
-        <div className="hero-ring-scroll" aria-hidden="true"><div className="hero-ring-float"><div className="hero-ring-motion"><img className="hero-ring" src="/assets/focus-ring.svg" alt="" width="900" height="900" /></div></div></div>
+        <div className="hero-ring-scroll" aria-hidden="true"><div className="hero-ring-float"><div className="hero-ring-motion"><img className="hero-ring" src="/assets/focus-ring.svg" alt="" width="300" height="300" /></div></div></div>
         <div className="hero-depth">
         <div className="hero-floor" aria-hidden="true" />
         <div className="hero-device-scroll"><div className="hero-device-motion"><div className="hero-laptop-float"><div className="hero-laptop">

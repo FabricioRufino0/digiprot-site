@@ -22,7 +22,7 @@ export default function SiteHeader({ currentPage = 'home' }) {
     ], { duration: 180, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' })
   }
   return <header className="site-header shell">
-    <a className="brand" href={`${home}#inicio`} aria-label="DIGIPROT, início"><img src="/assets/identity/digiprot-logo.webp" alt="DIGIPROT" width="600" height="200" /></a>
+    <a className="brand" href={`${home}#inicio`} aria-label="DIGIPROT, início"><img src="/assets/identity/digiprot-logo.webp" alt="DIGIPROT" width="300" height="100" /></a>
     <nav className="desktop-nav" aria-label="Navegação principal">{links.map(([href, label]) => <a key={href} href={href} aria-current={currentPage === 'examples' && href === '#modelos' ? 'page' : undefined}>{label}</a>)}</nav>
     <a className="header-contact" href={commercialUrl} target="_blank" rel="noopener noreferrer">Vamos conversar <ArrowUpRight aria-hidden="true" /></a>
     <details className="mobile-menu" ref={menu} onToggle={animateMenu} onPointerDown={() => { keyboard.current = false }} onKeyDown={event => { keyboard.current = true; menuAnimation.current?.cancel(); if (event.key === 'Escape') { closeMenu(); menu.current.querySelector('summary').focus() } }}>

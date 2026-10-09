@@ -25,22 +25,24 @@ export default function ServiceSummary() {
       <div className="services-layout">
         <div className="services-intro">
           <h2 id="services-title">Seu negócio,<br />bem apresentado.</h2>
-          <p>Criamos o site do seu negócio para mostrar o que você oferece e facilitar o contato dos clientes. Ele é pensado para ser fácil de usar no celular e no computador, com o visual da sua marca.</p>
+          <p>A DIGIPROT cria sites com a identidade do seu negócio, serviços bem organizados e formas claras de contato pelo celular ou computador. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.</p>
         </div>
-        <div className="service-details">
+        <ul className="service-details">
           {services.map((service, index) => (
-            <details className="service-item" key={service.title} open={index === 0}>
-              <summary className="service-trigger">
-                <span className="service-heading">
-                  <span className="service-title">{service.title}</span>
-                  <span className="service-summary">{service.summary}</span>
-                </span>
-                <span className="service-toggle" aria-hidden="true" />
-              </summary>
-              <div className="service-content"><p>{service.content}</p></div>
-            </details>
+            <li key={service.title}>
+              <details className="service-item" open={index === 0}>
+                <summary className="service-trigger">
+                  <span className="service-heading">
+                    <span className="service-title">{service.title}</span>
+                    <span className="service-summary">{service.summary}</span>
+                  </span>
+                  <span className="service-toggle" aria-hidden="true" />
+                </summary>
+                <div className="service-content"><p>{service.content}</p></div>
+              </details>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div className="contact" id="contato">
         <h2>O que seu negócio<br />precisa mostrar?</h2>
