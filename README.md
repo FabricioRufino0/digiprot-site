@@ -48,6 +48,8 @@ Há rolagem nativa, foco visível, link para pular ao conteúdo, menu móvel nat
 
 O domínio canônico está configurado como `https://digiprot.com.br/`. O build inclui canonical por página, Open Graph, Twitter Cards, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt` e versões Markdown das duas páginas. Rode `npm run build` e `npm run check:seo` antes de publicar.
 
+O Worker redireciona permanentemente `www.digiprot.com.br` para `https://digiprot.com.br`, preservando o caminho e os parâmetros da URL.
+
 `wrangler.toml` configura o Worker para servir `dist/`, manter barra final em páginas de diretório e exibir `dist/404.html` para URLs inexistentes.
 
 O domínio de produção usa o Worker `digiprot-site`, conectado à branch `main` deste repositório pelo Cloudflare Workers Builds. A configuração de produção é:
