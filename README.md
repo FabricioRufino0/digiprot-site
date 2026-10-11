@@ -26,15 +26,17 @@ O build estático fica em `dist/`. As páginas principal e `/exemplos/` são pr�
 
 - `src/components/`: cabeçalho, hero, clientes, comparação responsiva, conceitos, serviços e rodapé.
 - `src/ExamplesPage.jsx`: página independente para os estudos conceituais, em `/exemplos/`.
-- `src/data/`: dois projetos reais, quatro estudos conceituais e contatos existentes.
+- `src/data/`: dois projetos reais, oito estudos conceituais e contatos existentes.
 - `src/styles/`: tokens e composição responsiva.
-- `src/components/ui/tabs.jsx`: primitivo shadcn/Base UI adaptado à identidade DIGIPROT.
-- `public/assets/`: PNG original do logo, anel SVG e capturas WebP.
+- `src/components/ui/`: abas, diálogo, botões e seleção de formatos com shadcn/Base UI.
+- `public/assets/`: PNG original do logo, anel SVG, capturas e fotos WebP locais.
 - `scripts/prerender.mjs`: HTML para o build estático.
 - `docs/home-performance-review.md` e `docs/seo-performance-audit.md`: medições, verificações e limites da entrega.
 - Os antigos `styles.css`, `script.js` e assets de hero permanecem como referência de migração e não são importados pela página nova.
 
 ## Movimento e acessibilidade
+
+Os oito estudos ficam exclusivamente em `/exemplos/`, com filtros por segmento e prévias navegáveis em computador e celular. Motion anima a reorganização da galeria e a mudança de formato; shadcn/Base UI cuida do diálogo, do foco e dos filtros. As fotos são locais. A home mantém clientes e serviços.
 
 GSAP coordena a montagem inicial dos dispositivos, seguida de flutuação enquanto a cena está visível. A sequência termina ao sair da área ou ocultar a aba; a flutuação pausa nessas situações e pelo controle manual. Em desktop com altura suficiente, a rolagem aproxima o notebook e o celular. `prefers-reduced-motion` mantém os dispositivos no estado final. Motion faz a transição entre formatos e a troca das prévias; cada elemento tem um controlador.
 
@@ -42,7 +44,7 @@ Na principal, os recursos avançados de Motion carregam quando as prévias se ap
 
 Depois do build, rode `npm run check:performance`. Um relatório Lighthouse móvel pode ser validado com `npm run check:performance -- caminho/relatorio.json`. Os resultados e limites desta revisão estão em `docs/home-performance-review.md`.
 
-Há rolagem nativa, foco visível, link para pular ao conteúdo, menu móvel nativo e abas operáveis com teclado. Sem JavaScript, a página principal mantém os dois clientes visíveis, e `/exemplos/` mostra uma galeria estática dos quatro estudos. Contato comercial e suporte técnico permanecem separados.
+Há rolagem nativa, foco visível, link para pular ao conteúdo, menu móvel nativo e abas operáveis com teclado. Sem JavaScript, a página principal mantém os dois clientes visíveis, e `/exemplos/` mostra as oito composições e suas descrições. Contato comercial e suporte técnico permanecem separados.
 
 ## Antes de publicar
 
@@ -61,3 +63,20 @@ O domínio de produção usa o Worker `digiprot-site`, conectado à branch `main
 O deploy publica o conteúdo de `dist/`, incluindo `/exemplos/`, `_redirects`, `_headers` e `404.html`. A configuração explícita evita a autodetecção do Wrangler, que falha ao analisar este `vite.config.js`. Consulte `docs/seo-performance-audit.md` para as verificações após publicação.
 
 Um push para `main` dispara a publicação automática. Confirme o sucesso no Cloudflare e confira o domínio; um push aceito pelo GitHub não garante que o deploy tenha terminado.
+
+## Estado verificado em 2026-10-11
+
+A home apresenta os dois clientes reais, serviços e contato, sem a galeria conceitual. Foram ajustados tipografia, espaçamento, botões, enquadramento do hero, fundos dos projetos e animações do contato e rodapé. Os estudos foram concentrados em `/exemplos/` para dar espaço às prévias e manter a principal focada nos trabalhos entregues.
+
+A página de exemplos contém oito marcas fictícias: BRASA (restaurante), vértice (arquitetura), VELO. (bicicletas), aura (estética), mimo (confeitaria), LINHA (barbearia), brisa (climatização) e soma (contabilidade). Oferece filtros, diálogo com prévia navegável, formatos computador/celular e contato com mensagem específica do modelo. Nenhum estudo representa um cliente ou resultado comercial real.
+
+Verificações realizadas nesta revisão:
+
+- `npm run build`, `npm run check:seo`, `npm run check:performance` e `git diff --check`: aprovados.
+- Orçamento da home: CSS inline de 30,4 KiB e JavaScript inicial de 144,9 KiB gzip, dentro dos limites de 48 e 160 KiB.
+- Build em navegador: oito diálogos abrem e fecham; seleção de celular e filtro Comércio funcionam; nenhuma rolagem horizontal em 320, 390, 768 e 1440 px; nenhum erro JavaScript observado.
+- Na revisão da galeria também foram conferidos Escape e retorno de foco, navegação interna, movimento reduzido e os oito modelos disponíveis sem JavaScript.
+
+O pacote não tem scripts de lint nem uma suíte unitária separada. Esta revisão não repete Lighthouse nem mede Core Web Vitals de campo; os relatórios anteriores permanecem históricos.
+
+As sete fotografias da galeria são do Unsplash, armazenadas em `public/assets/concepts/photos/`, sob a [licença Unsplash](https://unsplash.com/license). Contabilidade usa ilustração composta na interface. Referências de direção visual: [Watermelon](https://ui.watermelon.sh/), [21st](https://21st.dev/community/templates/free), [Kedhareswer](https://21st.dev/@kedhareswer) e [Skiper UI](https://skiper-ui.com/components?source=free).

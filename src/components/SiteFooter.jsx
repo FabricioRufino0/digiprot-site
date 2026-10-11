@@ -28,6 +28,7 @@ export default function SiteFooter({ currentPage = 'home' }) {
       </nav>
     </div>
 
+    <div className="footer-wordmark" aria-hidden="true">{'DIGIPROT'.split('').map((letter, index) => <span key={index}>{letter}</span>)}</div>
     <div className="footer-bottom">
       <p>© {new Date().getFullYear()} DIGIPROT.</p>
       <a className="footer-back" href={`${home}#inicio`}>Voltar ao início <ArrowUp aria-hidden="true" /></a>

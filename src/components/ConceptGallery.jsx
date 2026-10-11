@@ -1,149 +1,75 @@
-import { useEffect, useState } from 'react'
-import { useReducedMotion } from 'motion/react'
+import { useState } from 'react'
+import { AnimatePresence, useReducedMotion } from 'motion/react'
 import * as m from 'motion/react-m'
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
-import { concepts } from '@/data/concepts'
+import { ArrowDown, ArrowUpRight, Monitor, Smartphone, X, Expand } from 'lucide-react'
+import { concepts, conceptCategories, conceptsDescription } from '@/data/concepts'
+import { commercialUrl } from '@/data/projects'
+import ConceptPreview from './ConceptPreview'
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
+import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group'
+import { Button } from './ui/button'
 
-const cardTransition = { type: 'spring', stiffness: 520, damping: 40, mass: 0.65, opacity: { duration: 0.18 } }
+const spring = { type: 'spring', stiffness: 320, damping: 32 }
 
-export default function ConceptGallery({ standalone = false }) {
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const reducedMotion = useReducedMotion()
-  const [dragEnabled, setDragEnabled] = useState(false)
-  useEffect(() => setDragEnabled(!reducedMotion), [reducedMotion])
-  const selected = concepts[selectedIndex]
-  const Heading = standalone ? 'h1' : 'h2'
-  const ItemHeading = standalone ? 'h2' : 'h3'
-  const move = step => setSelectedIndex(index => (index + step + concepts.length) % concepts.length)
+function ConceptCard({ concept, ref }) {
+  const [open, setOpen] = useState(false)
+  const [device, setDevice] = useState('desktop')
+  const reduce = useReducedMotion()
+  const contact = commercialUrl.split('?')[0] + '?text=' + encodeURIComponent('Olá! Gostei do exemplo de ' + concept.name.toLowerCase() + ' (' + concept.brand + ') no site da DIGIPROT e gostaria de conversar sobre meu projeto.')
 
-  const finishDrag = (_, info) => {
-    if (info.offset.x < -72 || info.velocity.x < -450) move(1)
-    else if (info.offset.x > 72 || info.velocity.x > 450) move(-1)
-  }
-
-  return (
-    <section className={`concepts shell section-space${standalone ? ' concepts-standalone' : ''}`} id="modelos" aria-labelledby="concepts-title">
-      <div className="section-heading">
-        <Heading id="concepts-title">Exemplos para<br />inspirar seu site.</Heading>
-        <p>{standalone
-          ? 'Quatro estudos conceituais de sites: climatização, confeitaria, contabilidade e bicicletas. Veja ideias para serviços e produtos. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.'
-          : 'Veja como diferentes negócios podem apresentar seus produtos e serviços em um site. Passe pelas prévias e encontre ideias para o seu.'}</p>
-      </div>
-
-      <div className="concept-carousel" role="region" aria-roledescription="carrossel" aria-label="Exemplos de sites para diferentes negócios">
-        <div className="concept-stage">
-          <m.div
-            className="concept-deck"
-            drag={dragEnabled ? 'x' : false}
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.12}
-            dragMomentum={false}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 42 }}
-            onDragEnd={finishDrag}
-          >
-            {concepts.map((concept, index) => {
-              const distance = (index - selectedIndex + concepts.length) % concepts.length
-              const offset = distance > concepts.length / 2 ? distance - concepts.length : distance
-              const active = offset === 0
-              const adjacent = Math.abs(offset) === 1
-
-              return <m.article
-                key={concept.id}
-                className="concept-slide"
-                role="group"
-                aria-roledescription="slide"
-                aria-label={`${index + 1} de ${concepts.length}: ${concept.name}`}
-                aria-hidden={!active}
-                initial={false}
-                animate={{ x: `${offset * 7.5}%`, rotateY: offset * -6, scale: active ? 1 : 0.9, opacity: active || adjacent ? 1 : 0 }}
-                transition={reducedMotion ? { duration: 0 } : cardTransition}
-                style={{ zIndex: active ? 3 : adjacent ? 2 : 1, pointerEvents: active ? 'auto' : 'none', '--card-shade': active ? 0 : 0.6 }}
-              >
-                <div className="concept-browser">
-                  <div className="concept-windowbar" aria-hidden="true">
-                    <span className="concept-window-dots"><i /><i /><i /></span>
-                    <span>Exemplo de site</span>
-                  </div>
-                  <figure className="concept-screen">
-                    <img src={concept.previewImage} alt={concept.alt} width={concept.width} height={concept.height} loading="eager" decoding="async" draggable={false} />
-                  </figure>
-                </div>
-              </m.article>
-            })}
+  return <m.article ref={ref} layout="position" className="gallery-card" initial={{ opacity: 0, y: reduce ? 0 : 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: reduce ? 1 : 0.96 }} transition={reduce ? { duration: 0 } : spring}>
+    <Dialog open={open} onOpenChange={next => { setOpen(next); if (next) setDevice('desktop') }}>
+      <DialogTrigger className="gallery-preview-trigger" aria-label={'Explorar exemplo de ' + concept.name.toLowerCase()} style={{ '--stage-color': concept.color }}>
+        <div className="gallery-preview-window" aria-hidden="true"><div className="gallery-windowbar"><span /><span /><span /><i>{concept.brand.toLowerCase()} / estudo de site</i></div><ConceptPreview concept={concept} /></div>
+        <span className="gallery-preview-open"><Expand aria-hidden="true" />Explorar modelo</span>
+      </DialogTrigger>
+      <div className="gallery-card-caption"><div><p>{concept.style}</p><h3>{concept.name}</h3></div><span className="gallery-palette" aria-hidden="true"><i style={{ background: concept.color }} /><i style={{ background: concept.ink }} /><i /></span></div>
+      <p className="gallery-card-summary">{concept.summary}</p>
+      <DialogContent className="concept-viewer">
+        <div className="viewer-toolbar">
+          <div><DialogTitle>{concept.brand} <span>/ {concept.name}</span></DialogTitle><DialogDescription>Estudo conceitual. Navegue pela prévia abaixo.</DialogDescription></div>
+          <ToggleGroup className="viewer-formats" value={[device]} onValueChange={value => { if (value.length) setDevice(value[0]) }} aria-label="Formato da prévia">
+            <ToggleGroupItem value="desktop" aria-label="Computador"><Monitor aria-hidden="true" /><span>Computador</span></ToggleGroupItem>
+            <ToggleGroupItem value="mobile" aria-label="Celular"><Smartphone aria-hidden="true" /><span>Celular</span></ToggleGroupItem>
+          </ToggleGroup>
+          <DialogClose render={<Button variant="outline" size="icon" />} aria-label="Fechar prévia"><X aria-hidden="true" /></DialogClose>
+        </div>
+        <div className="viewer-scroll">
+          <m.div layout={!reduce} className="viewer-device" data-device={device} transition={spring} style={{ borderRadius: device === 'mobile' ? 24 : 10 }}>
+            <div className="viewer-browserbar"><span aria-hidden="true">● ● ●</span><span>{concept.brand.toLowerCase()} — prévia de demonstração</span></div>
+            <ConceptPreview concept={concept} device={device} expanded />
           </m.div>
         </div>
+        <div className="viewer-footer"><p>Gostou desta direção para o seu negócio?</p><a className="action action-primary" href={contact} target="_blank" rel="noopener noreferrer">Quero um site assim <ArrowUpRight aria-hidden="true" /></a></div>
+      </DialogContent>
+    </Dialog>
+  </m.article>
+}
 
-        <div className="concept-carousel-info">
-          <p className="concept-index" aria-hidden="true">{String(selectedIndex + 1).padStart(2, '0')} <span>/</span> {String(concepts.length).padStart(2, '0')}</p>
-          <div className="concept-copy-slot">
-            <m.div
-              key={selected.id}
-              className="concept-carousel-copy"
-              initial={{ opacity: 0.65 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: reducedMotion ? 0 : 0.16 }}
-            >
-              <ItemHeading>{selected.name}</ItemHeading>
-              <p>{selected.summary}</p>
-            </m.div>
-            <p className="concept-disclaimer">Prévia de demonstração, sem vínculo com clientes.</p>
-          </div>
+export default function ConceptGallery() {
+  const [category, setCategory] = useState('Todos')
+  const reduce = useReducedMotion()
+  const visible = category === 'Todos' ? concepts : concepts.filter(concept => concept.category === category)
 
-          <div className="concept-controls-row">
-            <div className="concept-pagination" role="group" aria-label="Escolher um exemplo de site">
-              {concepts.map((concept, index) => (
-                <button
-                  key={concept.id}
-                  type="button"
-                  aria-label={`Ir para ${concept.name}`}
-                  aria-pressed={selectedIndex === index}
-                  className={selectedIndex === index ? 'is-active' : ''}
-                  onClick={() => setSelectedIndex(index)}
-                >
-                  <span aria-hidden="true" />
-                </button>
-              ))}
-            </div>
-            <div className="concept-carousel-controls">
-              <button type="button" className="concept-step" aria-label="Exemplo anterior" onClick={() => move(-1)}>
-                <ArrowLeft aria-hidden="true" />
-              </button>
-              <button type="button" className="concept-step" aria-label="Próximo exemplo" onClick={() => move(1)}>
-                <ArrowRight aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <p className="sr-only" aria-live="polite" aria-atomic="true">{selected.name}, exemplo {selectedIndex + 1} de {concepts.length}</p>
-        </div>
+  return <div className="examples-page">
+    <section className="gallery-opening shell" aria-labelledby="concepts-title">
+      <div className="gallery-opening-copy"><p className="gallery-overline">O estúdio de ideias da DIGIPROT</p><h1 id="concepts-title">Seu negócio.<br />Outras possibilidades.</h1><p className="gallery-lead">Oito direções de design para imaginar o que o seu site pode ser. Escolha uma, entre e explore.</p><a href="#colecao" className="gallery-explore">Encontre sua inspiração <span><ArrowDown aria-hidden="true" /></span></a></div>
+      <div className="gallery-opening-art" aria-hidden="true">
+        {[concepts[1], concepts[0], concepts[2]].map((concept, index) => <div key={concept.id} className={'opening-preview opening-preview-' + index}><ConceptPreview concept={concept} eager /></div>)}
+        <span className="opening-note">Cada negócio pede um olhar.</span>
       </div>
-
-      {standalone && (
-        <section className="concept-explanations" aria-labelledby="concept-details-title">
-          <h2 id="concept-details-title">O que cada estudo explora?</h2>
-          <ul className="concept-details">
-            {concepts.map(concept => (
-              <li key={concept.id}>
-                <h3>{concept.name}</h3>
-                <p>{concept.detail}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {standalone && <a className="examples-client-link" href="/#projetos">Conheça os sites feitos para nossos clientes <ArrowUpRight aria-hidden="true" /></a>}
-      <noscript>
-        <ul className="nojs-concepts">
-          {concepts.map(concept => (
-            <li key={concept.id}>
-              <figure>
-                <img src={concept.previewImage} alt={concept.alt} width={concept.width} height={concept.height} loading="lazy" />
-                <figcaption><ItemHeading>{concept.name}</ItemHeading><p>Exemplo de demonstração. {concept.summary}</p></figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
-      </noscript>
+      <div className="gallery-opening-foot"><span>Design para explorar, do seu jeito.</span><p>Modelos conceituais · Marcas fictícias</p></div>
     </section>
-  )
+
+    <section className="gallery-collection shell" id="colecao" aria-labelledby="collection-title">
+      <div className="gallery-collection-heading"><h2 id="collection-title">Qual é a sua próxima ideia?</h2><p>Abra um modelo para ver os detalhes.<br />Experimente também a versão para celular.</p></div>
+      <div className="gallery-filterbar"><ToggleGroup className="gallery-filters" value={[category]} onValueChange={value => { if (value.length) setCategory(value[0]) }} aria-label="Filtrar exemplos por segmento">{conceptCategories.map(item => <ToggleGroupItem key={item} value={item}>{item}</ToggleGroupItem>)}</ToggleGroup><span className="gallery-count" role="status" aria-live="polite">{visible.length} {visible.length === 1 ? 'modelo' : 'modelos'}</span></div>
+      <m.div layout={!reduce} className="gallery-grid" transition={spring}><AnimatePresence initial={false} mode="popLayout">{visible.map(concept => <ConceptCard key={concept.id} concept={concept} />)}</AnimatePresence></m.div>
+      <noscript><p>As prévias e descrições estão disponíveis abaixo. Ative o JavaScript para abrir os modelos e usar os filtros.</p></noscript>
+    </section>
+
+    <section className="gallery-about shell" aria-labelledby="gallery-about-title"><div><h2 id="gallery-about-title">Uma referência.<br />O seu ponto de partida.</h2><p>{conceptsDescription}</p><p>Estes são estudos de interface, não projetos entregues a clientes. As marcas são fictícias. Seu site é criado a partir da identidade e das necessidades do seu negócio.</p></div><a className="gallery-contact-link" href={commercialUrl} target="_blank" rel="noopener noreferrer">Vamos criar o seu?<ArrowUpRight aria-hidden="true" /></a></section>
+
+    <section className="gallery-notes shell" aria-label="Sobre os estudos"><ul className="concept-details">{concepts.map(concept => <li key={concept.id}><details><summary>{concept.name}<span aria-hidden="true">+</span></summary><p>{concept.detail}</p></details></li>)}</ul><a className="examples-client-link" href="/#projetos">Ver os projetos de clientes <ArrowUpRight aria-hidden="true" /></a></section>
+  </div>
 }

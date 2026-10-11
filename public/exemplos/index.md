@@ -2,28 +2,42 @@
 
 Página oficial: https://digiprot.com.br/exemplos/
 
-Quatro estudos conceituais de sites: climatização, confeitaria, contabilidade e bicicletas. Veja ideias para serviços e produtos. As prévias são estudos de interface, não projetos entregues a clientes. Explore como cada proposta apresenta produtos, serviços e formas de contato.
+Oito estudos de sites para gastronomia, arquitetura, beleza, comércio e serviços. Explore estilos e prévias para computador e celular.
 
-## Estudos
+São estudos conceituais com marcas fictícias, não projetos entregues a clientes.
 
-### Ar-condicionado
+## Restaurante — BRASA
 
-Este estudo mostra como uma empresa de ar-condicionado pode explicar instalação, limpeza e conserto sem misturar os serviços. Cada opção apresenta o tipo de atendimento e indica como pedir um orçamento ou agendar uma visita. A organização ajuda clientes com necessidades diferentes a encontrar as informações mais relevantes antes de iniciar uma conversa com a equipe.
+O cardápio ganha espaço em uma composição inspirada em menus impressos. A fotografia aproxima o visitante da experiência do restaurante, enquanto os destaques da cozinha e o convite para reservar ficam fáceis de encontrar. Uma proposta para casas que querem apresentar seu ambiente e sua comida com a mesma atenção.
 
-### Confeitaria
+## Arquitetura — vértice
 
-Na confeitaria, a vitrine reúne bolos e doces e orienta quem está planejando uma encomenda. O estudo organiza os produtos para ajudar a comparar opções e sugere informações úteis sobre sabores, ocasião e prazo. Ao deixar o contato visível, o site facilita a conversa para combinar detalhes de uma comemoração.
+As imagens dos ambientes orientam a navegação deste portfólio. Tipografia editorial, margens generosas e uma paleta mineral deixam os materiais aparecerem. A proposta apresenta projetos residenciais e interiores, explica as etapas de trabalho e abre espaço para o visitante contar como gostaria de viver.
 
-### Contabilidade
+## Loja de bicicletas — VELO.
 
-Este conceito organiza os serviços de contabilidade pelo momento de cada empresa: abrir um negócio, manter a rotina financeira ou entender questões de impostos. A navegação ajuda a encontrar o assunto mais próximo da dúvida e a entender que tipo de apoio pode ser solicitado. Assim, a página apresenta informações profissionais em uma ordem fácil de seguir.
+Catálogo e oficina fazem parte da mesma experiência. Este estudo reúne modelos, revisões e acessórios em uma linguagem esportiva, com contraste forte e títulos largos. O visitante encontra caminhos para escolher uma bicicleta e cuidar da que já tem, com a identidade da loja presente em cada parte.
 
-### Loja de bicicletas
+## Estética e bem-estar — aura
 
-Para uma loja de bicicletas, o catálogo e a oficina fazem parte da mesma experiência. Este estudo reúne os modelos, as revisões e os serviços de conserto, além de indicar como agendar atendimento. O visitante consegue conhecer as opções antes de escolher e também encontra informações de suporte depois da compra, sem precisar procurar cada serviço em páginas separadas.
+A página apresenta os cuidados em linguagem simples, sem promessas de resultados. Formas suaves, fotografia e títulos delicados ajudam a comunicar acolhimento. O visitante pode conhecer as opções de atendimento e entender como iniciar uma conversa para escolher o cuidado mais adequado ao seu momento.
 
-## Clientes e contato
+## Confeitaria — mimo
 
-- [Sites de clientes e serviços da DIGIPROT](https://digiprot.com.br/index.md)
-- [Comercial pelo WhatsApp](https://wa.me/5561986684723)
-- [Suporte técnico pelo WhatsApp](https://wa.me/5561995604114)
+A vitrine reúne bolos e doces e orienta quem está planejando uma encomenda. A composição destaca a textura dos produtos e sugere informações sobre sabores, ocasiões e prazo. O contato aparece depois das opções para facilitar a conversa sobre os detalhes de cada comemoração.
+
+## Barbearia — LINHA
+
+O estudo usa a linguagem gráfica das barbearias para apresentar corte, barba e cuidados. Títulos fortes e fotografia em preto e branco dão personalidade à página. Os serviços aparecem de forma direta e a navegação termina em um convite para combinar o próximo atendimento.
+
+## Ar-condicionado — brisa
+
+Este estudo mostra como uma empresa de ar-condicionado pode explicar instalação, limpeza e conserto sem misturar os serviços. A imagem de um ambiente confortável aproxima o serviço do cotidiano. Cada opção explica seu propósito e orienta a conversa para solicitar uma visita ou um orçamento.
+
+## Contabilidade — soma
+
+A proposta organiza os serviços pelo momento da empresa: abrir um negócio, cuidar da rotina ou planejar os próximos passos. Elementos gráficos representam organização, sem simular resultados financeiros. Uma linguagem acessível ajuda o visitante a entender o tipo de apoio que pode procurar.
+
+## Contato
+
+[Converse com a DIGIPROT](https://wa.me/5561986684723)

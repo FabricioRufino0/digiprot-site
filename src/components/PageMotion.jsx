@@ -45,18 +45,37 @@ export default function PageMotion({ children }) {
       reveal(select('.examples-client-link'), { y: 12, opacity: 0 })
       reveal(select('.services-intro > *'), { y: distance, opacity: 0 }, select('.services-intro')[0])
       reveal(select('.service-details > *'), { y: 20, opacity: 0 }, select('.service-details')[0])
-      reveal(select('.contact > *'), { y: distance, opacity: 0 }, select('.contact')[0])
+      reveal(select('.contact-copy'), { y: distance, opacity: 0 }, select('.contact')[0])
       reveal(select('.footer-top > *'), { y: 12, opacity: 0 }, select('.site-footer')[0])
       reveal(select('.footer-bottom > *'), { y: 8, opacity: 0 }, select('.site-footer')[0])
+      reveal(select('.footer-wordmark > span'), { yPercent: 105, rotation: 8 }, select('.footer-wordmark')[0])
+      select('.contact-orbit').forEach(orbit => {
+        gsap.fromTo(orbit, { rotation: -35, scale: 0.8 }, {
+          rotation: 0, scale: 1, ease: 'none',
+          scrollTrigger: { trigger: orbit, start: 'top bottom', end: 'top 65%', scrub: 0.6 },
+        })
+      })
       const showFocusedContent = event => {
         entrances.forEach(tween => {
           if (tween.targets().some(target => target === event.target || target.contains(event.target))) tween.progress(1)
         })
       }
       page.current.addEventListener('focusin', showFocusedContent)
+      let refreshTimer
+      const refreshAfterToggle = event => {
+        if (!event.target.classList.contains('service-item')) return
+        clearTimeout(refreshTimer)
+        refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 320)
+      }
+      page.current.addEventListener('toggle', refreshAfterToggle, true)
       let mounted = true
       if (document.fonts.status !== 'loaded') document.fonts.ready.then(() => { if (mounted) ScrollTrigger.refresh() })
-      return () => { mounted = false; page.current?.removeEventListener('focusin', showFocusedContent) }
+      return () => {
+        mounted = false
+        clearTimeout(refreshTimer)
+        page.current?.removeEventListener('focusin', showFocusedContent)
+        page.current?.removeEventListener('toggle', refreshAfterToggle, true)
+      }
     })
     media.add('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)', () => {
       const cleanups = gsap.utils.toArray('.project-preview').map(preview => {

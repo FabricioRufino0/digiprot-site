@@ -28,9 +28,9 @@ function ProjectCard({ project }) {
             >
               <a className="project-preview" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visitar o site da ${project.name} (nova aba)`}>
                 <div className="project-camera"><BrowserFrame project={project} mobile={value === 'mobile'} /></div>
-                <span className="preview-visit"><ArrowUpRight aria-hidden="true" /></span>
+                <span className="preview-visit"><span>Visitar site</span><ArrowUpRight aria-hidden="true" /></span>
               </a>
-              <p className="capture-caption">Captura real · {value === 'mobile' ? '390' : '1440'} px de largura</p>
+              <p className="capture-caption">{value === 'mobile' ? 'A mesma identidade, na palma da mão.' : 'Explore também a versão para celular.'}</p>
             </m.div>
           </TabsContent>
         ))}
