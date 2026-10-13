@@ -60,9 +60,13 @@ O coral conduz a ação principal e o anel; turquesa marca foco e seleção. Fun
 
 ## Typography
 
+Preferência explícita do usuário em 2026-10-12: seções e cartões começam pelo título principal, sem pequenas chamadas decorativas acima. Textos necessários ficam abaixo do título. A regra abrange a home, a galeria e as prévias de exemplos.
+
 Archivo usa peso 750 nos títulos, aproximando o destaque geométrico da wordmark DIGIPROT. Manrope mantém legibilidade na leitura. As duas fontes ficam hospedadas no próprio build. Texto de leitura em 400; controles em 700. Sem texto em gradiente ou monospace decorativo.
 
 ## Layout
+
+A home dá acesso à coleção com o botão principal “Explorar exemplos”, preservando os caminhos para clientes e contato. Os oito estudos usam conteúdo próprio de marcas fictícias. BRASA e LINHA colocam fotografia atrás do título; vértice abre com o ambiente; aura aproxima a imagem do cuidado à esquerda; VELO. usa contraste esportivo; mimo destaca o bolo; brisa organiza serviços em linhas; soma usa uma lista de documentos como motivo visual. Cardápio, projetos, cuidados e manutenção têm textos específicos. A coleção mantém a identidade DIGIPROT e o movimento existente; as diferenças internas estão na composição e no conteúdo. ENERGY 2 / RHYTHM 3 / MOTION 2.
 
 Container de até 1320px. Refluxo em 620, 900 e 1200px. Em celular, a cena vem antes do título e as ações ocupam a largura; em desktop, título à esquerda e cena à direita. A página principal apresenta clientes e serviços. Estudos conceituais ficam em `/exemplos/`, com controles próprios. Espaçamento de seção: 4rem em celular, 5rem em tablet e 6rem em desktop.
 

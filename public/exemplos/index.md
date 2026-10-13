@@ -2,41 +2,41 @@
 
 Página oficial: https://digiprot.com.br/exemplos/
 
-Oito estudos de sites para gastronomia, arquitetura, beleza, comércio e serviços. Explore estilos e prévias para computador e celular.
+Oito negócios fictícios, oito jeitos de se apresentar. Conheça a cozinha da BRASA, a oficina VELO. e outros exemplos no computador e no celular.
 
-São estudos conceituais com marcas fictícias, não projetos entregues a clientes.
+São estudos conceituais com marcas fictícias, não projetos entregues a clientes. Os textos abaixo descrevem os negócios fictícios.
 
 ## Restaurante — BRASA
 
-O cardápio ganha espaço em uma composição inspirada em menus impressos. A fotografia aproxima o visitante da experiência do restaurante, enquanto os destaques da cozinha e o convite para reservar ficam fáceis de encontrar. Uma proposta para casas que querem apresentar seu ambiente e sua comida com a mesma atenção.
+Na BRASA, o almoço começa com os vegetais da estação e segue no tempo do fogo. Gostamos da casquinha tostada, do caldo no fundo do prato e de servir porções para repartir. O cardápio muda com os ingredientes que chegam à cozinha.
 
 ## Arquitetura — vértice
 
-As imagens dos ambientes orientam a navegação deste portfólio. Tipografia editorial, margens generosas e uma paleta mineral deixam os materiais aparecerem. A proposta apresenta projetos residenciais e interiores, explica as etapas de trabalho e abre espaço para o visitante contar como gostaria de viver.
+Antes da planta, conversamos sobre o dia a dia de quem vai morar ali. O projeto reúne circulação, luz natural e materiais que fazem sentido para a casa. Cada escolha é discutida junto com o orçamento e as possibilidades da obra.
 
 ## Loja de bicicletas — VELO.
 
-Catálogo e oficina fazem parte da mesma experiência. Este estudo reúne modelos, revisões e acessórios em uma linguagem esportiva, com contraste forte e títulos largos. O visitante encontra caminhos para escolher uma bicicleta e cuidar da que já tem, com a identidade da loja presente em cada parte.
+Você conta onde pedala, a gente conversa sobre quadro, posição e marchas. Na oficina, olhamos a bike que você já tem e explicamos o que precisa de ajuste. Vale chegar com um modelo em mente ou com a dúvida de quem quer começar.
 
 ## Estética e bem-estar — aura
 
-A página apresenta os cuidados em linguagem simples, sem promessas de resultados. Formas suaves, fotografia e títulos delicados ajudam a comunicar acolhimento. O visitante pode conhecer as opções de atendimento e entender como iniciar uma conversa para escolher o cuidado mais adequado ao seu momento.
+Na aura, o atendimento começa pela escuta. Conversamos sobre sua rotina de cuidados e o que você procura na sessão. As opções, os produtos e as orientações são explicados antes de começar, para você escolher com tranquilidade.
 
 ## Confeitaria — mimo
 
-A vitrine reúne bolos e doces e orienta quem está planejando uma encomenda. A composição destaca a textura dos produtos e sugere informações sobre sabores, ocasiões e prazo. O contato aparece depois das opções para facilitar a conversa sobre os detalhes de cada comemoração.
+Na mimo, a encomenda começa pelo sabor. Depois conversamos sobre o tamanho do bolo, a cobertura e a ocasião. Também preparamos doces para a mesa e caixas para presentear. Conte a data e o que você tem em mente para consultar as opções.
 
 ## Barbearia — LINHA
 
-O estudo usa a linguagem gráfica das barbearias para apresentar corte, barba e cuidados. Títulos fortes e fotografia em preto e branco dão personalidade à página. Os serviços aparecem de forma direta e a navegação termina em um convite para combinar o próximo atendimento.
+Na LINHA, a referência ajuda, mas a conversa faz parte do corte. Olhamos o comprimento, o caimento e como você costuma arrumar o cabelo. Barba e acabamento seguem o mesmo cuidado: combinar o desenho antes de começar.
 
 ## Ar-condicionado — brisa
 
-Este estudo mostra como uma empresa de ar-condicionado pode explicar instalação, limpeza e conserto sem misturar os serviços. A imagem de um ambiente confortável aproxima o serviço do cotidiano. Cada opção explica seu propósito e orienta a conversa para solicitar uma visita ou um orçamento.
+A brisa atende quem precisa instalar um aparelho ou cuidar do que já está em uso. O ambiente, o modelo e os sinais de funcionamento orientam a avaliação. Você recebe a explicação do serviço e o orçamento antes de autorizar o trabalho.
 
 ## Contabilidade — soma
 
-A proposta organiza os serviços pelo momento da empresa: abrir um negócio, cuidar da rotina ou planejar os próximos passos. Elementos gráficos representam organização, sem simular resultados financeiros. Uma linguagem acessível ajuda o visitante a entender o tipo de apoio que pode procurar.
+Na soma, começamos entendendo a atividade da empresa e como os documentos circulam hoje. Organizamos a rotina contábil e explicamos as informações que precisam chegar ao escritório. Quando o negócio muda, a conversa acompanha essa mudança.
 
 ## Contato
 

@@ -30,14 +30,14 @@ function ProjectCard({ project }) {
                 <div className="project-camera"><BrowserFrame project={project} mobile={value === 'mobile'} /></div>
                 <span className="preview-visit"><span>Visitar site</span><ArrowUpRight aria-hidden="true" /></span>
               </a>
-              <p className="capture-caption">{value === 'mobile' ? 'A mesma identidade, na palma da mão.' : 'Explore também a versão para celular.'}</p>
+              <p className="capture-caption">{value === 'mobile' ? 'Veja como o site se adapta à tela do celular.' : 'Alterne para celular e compare as versões.'}</p>
             </m.div>
           </TabsContent>
         ))}
       </m.div>
     </Tabs>
     <div className="project-info">
-      <div><p className="project-business">Cliente DIGIPROT · {project.business}</p><h3><a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}<ArrowUpRight aria-hidden="true" /></a></h3></div>
+      <div><h3><a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}<ArrowUpRight aria-hidden="true" /></a></h3></div>
       <p>{project.summary}</p>
     </div>
   </article>
@@ -45,7 +45,7 @@ function ProjectCard({ project }) {
 
 export default function ProjectShowcase() {
   return <section className="projects shell section-space" id="projetos" aria-labelledby="projects-title">
-    <div className="section-heading"><h2 id="projects-title">Sites feitos pela<br />DIGIPROT.</h2><p>Cada negócio tem sua identidade. Veja como ela aparece nos sites que criamos.</p></div>
+    <div className="section-heading"><h2 id="projects-title">Sites feitos pela<br />DIGIPROT.</h2><p>Uma confeitaria e uma oficina diesel. Conheça os sites que criamos para apresentar o trabalho de cada uma.</p></div>
     <div className="project-grid">{projects.map(project => <ProjectCard project={project} key={project.id} />)}</div>
   </section>
 }

@@ -5,20 +5,20 @@ const services = [
   {
     title: 'Um site com a sua identidade',
     icon: PenTool,
-    summary: 'Seu negócio bem apresentado',
-    content: 'Criamos um site com o visual da sua marca e organizamos o que você oferece. As informações ficam fáceis de encontrar, tanto no celular quanto no computador.',
+    summary: 'Sua marca e o que você oferece',
+    content: 'Criamos o visual a partir da sua marca e organizamos seus produtos ou serviços. Quem visita encontra as informações de que precisa, no celular e no computador.',
   },
   {
     title: 'Seu site no ar',
     icon: Globe2,
-    summary: 'Do endereço à publicação',
-    content: 'Cuidamos dos passos para colocar o site na internet. O endereço fica registrado no seu nome. Antes de começar, combinamos o que será incluído para manter o site no ar e ligá-lo às ferramentas do seu negócio.',
+    summary: 'Endereço, publicação e integrações',
+    content: 'Cuidamos da publicação e registramos o endereço no seu nome. Antes de começar, definimos na proposta o que está incluído para manter o site no ar e conectá-lo às ferramentas que você usa.',
   },
   {
-    title: 'Seu negócio mais fácil de encontrar',
+    title: 'Um caminho para chegar até você',
     icon: MousePointer2,
     summary: 'Contato à vista e ajuda depois da entrega',
-    content: 'Preparamos o site para ajudar quem procura seus produtos ou serviços a encontrar seu negócio na internet. Seus contatos ficam à vista, para facilitar a conversa. Na proposta, combinamos como acompanhar as visitas e o apoio depois da entrega.',
+    content: 'Preparamos o site para quem procura seus produtos ou serviços na internet e deixamos o contato fácil de encontrar. Também combinamos na proposta como acompanhar as visitas e qual será o apoio depois da entrega.',
   },
 ]
 
@@ -27,8 +27,8 @@ export default function ServiceSummary() {
     <section className="services shell section-space" id="entrega" aria-labelledby="services-title">
       <div className="services-layout">
         <div className="services-intro">
-          <h2 id="services-title">Seu negócio,<br />bem apresentado.</h2>
-          <p>Sites para sua empresa: identidade visual, serviços claros e contato pelo celular ou computador. Veja ideias da DIGIPROT. Em cada página, organizamos as informações para que o cliente encontre o que procura e saiba como conversar com a empresa.</p>
+          <h2 id="services-title">O que seu cliente<br />precisa encontrar.</h2>
+          <p>Criamos sites com a identidade do seu negócio, serviços fáceis de entender e contato à vista. Conheça projetos e exemplos da DIGIPROT.</p>
         </div>
         <ul className="service-details">
           {services.map((service, index) => (
@@ -49,7 +49,7 @@ export default function ServiceSummary() {
         </ul>
       </div>
       <div className="contact" id="contato">
-        <div className="contact-copy"><p>Vamos tirar sua ideia do papel.</p><h2>O próximo site<br />pode ser o seu.</h2><a className="contact-link" href={commercialUrl} target="_blank" rel="noopener noreferrer">Conversar sobre meu site <ArrowUpRight aria-hidden="true" /></a></div>
+        <div className="contact-copy"><h2>Vamos pensar<br />no seu site?</h2><a className="contact-link" href={commercialUrl} target="_blank" rel="noopener noreferrer">Conversar sobre meu site <ArrowUpRight aria-hidden="true" /></a></div>
         <a className="contact-orbit" href={commercialUrl} target="_blank" rel="noopener noreferrer" aria-label="Conversar com a DIGIPROT pelo WhatsApp"><ArrowUpRight aria-hidden="true" /></a>
       </div>
     </section>

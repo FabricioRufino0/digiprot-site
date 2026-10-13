@@ -5,9 +5,9 @@ import { commercialUrl } from '@/data/projects'
 export default function SiteHeader({ currentPage = 'home' }) {
   const home = currentPage === 'examples' ? '/' : ''
   const links = [
-    [`${home}#projetos`, 'Clientes'],
+    [`${home}#projetos`, 'Sites de clientes'],
     [`${home}#entrega`, 'O que fazemos'],
-    [currentPage === 'examples' ? '#modelos' : '/exemplos/', 'Exemplos'],
+    [currentPage === 'examples' ? '#colecao' : '/exemplos/', 'Exemplos'],
   ]
   const menu = useRef(null)
   const keyboard = useRef(false)
@@ -23,11 +23,11 @@ export default function SiteHeader({ currentPage = 'home' }) {
   }
   return <header className="site-header shell">
     <a className="brand" href={`${home}#inicio`} aria-label="DIGIPROT, início"><img src="/assets/identity/digiprot-logo.webp" alt="DIGIPROT" width="300" height="100" /></a>
-    <nav className="desktop-nav" aria-label="Navegação principal">{links.map(([href, label]) => <a key={href} href={href} aria-current={currentPage === 'examples' && href === '#modelos' ? 'page' : undefined}>{label}</a>)}</nav>
-    <a className="header-contact" href={commercialUrl} target="_blank" rel="noopener noreferrer">Vamos conversar <ArrowUpRight aria-hidden="true" /></a>
+    <nav className="desktop-nav" aria-label="Navegação principal">{links.map(([href, label]) => <a key={href} href={href} aria-current={currentPage === 'examples' && href === '#colecao' ? 'page' : undefined}>{label}</a>)}</nav>
+    <a className="header-contact" href={commercialUrl} target="_blank" rel="noopener noreferrer">Falar sobre meu site <ArrowUpRight aria-hidden="true" /></a>
     <details className="mobile-menu" ref={menu} onToggle={animateMenu} onPointerDown={() => { keyboard.current = false }} onKeyDown={event => { keyboard.current = true; menuAnimation.current?.cancel(); if (event.key === 'Escape') { closeMenu(); menu.current.querySelector('summary').focus() } }}>
       <summary aria-label="Menu de navegação"><Menu className="menu-open-icon" aria-hidden="true" /><X className="menu-close-icon" aria-hidden="true" /></summary>
-      <nav aria-label="Navegação móvel">{links.map(([href, label]) => <a key={href} href={href} aria-current={currentPage === 'examples' && href === '#modelos' ? 'page' : undefined} onClick={closeMenu}>{label}</a>)}<a href={commercialUrl} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Falar com a DIGIPROT</a></nav>
+      <nav aria-label="Navegação móvel">{links.map(([href, label]) => <a key={href} href={href} aria-current={currentPage === 'examples' && href === '#colecao' ? 'page' : undefined} onClick={closeMenu}>{label}</a>)}<a href={commercialUrl} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Falar sobre meu site</a></nav>
     </details>
   </header>
 }

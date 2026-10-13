@@ -99,7 +99,6 @@ h1 { font-size: clamp(3.5rem, 11vw, 6.5rem); line-height: 1.06; }
 .project-preview .browser-frame img { aspect-ratio: 1.5; object-fit: cover; object-position: top; transition: transform 600ms var(--ease-out); }
 .preview-visit { position: absolute; right: 1rem; bottom: 1rem; min-height: 44px; padding: .6rem .8rem; display: flex; gap: .5rem; align-items: center; background: var(--foreground); color: var(--background); border-radius: 100px; font-size: .75rem; font-weight: 700; }
 .project-info { padding-top: 1.25rem; display: grid; gap: 1rem; }
-.project-business { font-size: .75rem; color: var(--muted-foreground); margin-bottom: .35rem; }
 .project-info h3 { font-size: 1.5rem; }
 .project-info h3 a { display: flex; gap: 1rem; align-items: baseline; justify-content: space-between; }
 .project-info > p { font-size: .875rem; max-width: 52ch; }
@@ -151,9 +150,8 @@ h1 { font-size: clamp(3.5rem, 11vw, 6.5rem); line-height: 1.06; }
   .service-item[open]::details-content { height: auto; opacity: 1; }
 }
 .contact { position: relative; isolation: isolate; overflow: clip; margin-top: 3.5rem; padding: clamp(1.75rem, 5vw, 4.5rem); display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; border-radius: 1.5rem; color: #102b29; background: #bce5d9; }
-.contact h2 { font-size: clamp(2.5rem,5.3vw,5rem); margin-block: 1.25rem 2rem; }
+.contact h2 { font-size: clamp(2.5rem,5.3vw,5rem); margin-block: 0 2rem; }
 .contact-copy { position: relative; z-index: 1; }
-.contact-copy > p { color: #35564e; font-size: .875rem; }
 .contact-link { display: inline-flex; gap: 1rem; align-items: center; min-height: 44px; font-weight: 700; font-size: .875rem; border-bottom: 1px solid #35564e; }
 .contact :focus-visible { outline-color: #102b29; }
 .contact-orbit { position: relative; display: grid; place-items: center; width: clamp(100px, 16vw, 210px); aspect-ratio: 1; flex-shrink: 0; border-radius: 50%; background: #102b29; color: #bce5d9; }

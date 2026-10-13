@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
 import { readFile, access } from 'node:fs/promises'
+import { concepts } from '../src/data/concepts.js'
 
 const origin = 'https://digiprot.com.br'
 const routes = [['/', 'dist/index.html'], ['/exemplos/', 'dist/exemplos/index.html']]
@@ -46,7 +47,9 @@ for (const [route, file] of routes) {
   const imageWidths = [...html.matchAll(/<img\b[^>]*\bwidth="(\d+)"/g)].map(match => Number(match[1]))
   assert.ok(imageWidths.every(width => width <= 300), `${file}: image width attributes should fit a phone viewport`)
   assert.equal([...html.matchAll(/<h1(?:\s|>)/g)].length, 1, file)
-  assert.ok(html.includes(route === '/' ? 'Nandices Confeitaria' : 'Este estudo mostra como uma empresa de ar-condicionado'), 'Content must be present without JavaScript')
+  for (const content of route === '/' ? ['Nandices Confeitaria'] : concepts.map(concept => concept.detail)) {
+    assert.ok(body.includes(content), 'Content must be present without JavaScript')
+  }
   assert.ok(!html.includes('/node_modules/'), 'Build must resolve font URLs')
   assert.ok(!html.includes('/src/'), 'Build must resolve entry URLs')
   for (const match of html.matchAll(/(?:src|href)="(\/assets\/[^"?#]+)"/g)) await access('dist' + match[1])
