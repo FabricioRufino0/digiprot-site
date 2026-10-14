@@ -80,7 +80,7 @@ O build local não criou cookies nem entradas em `localStorage` ou `sessionStora
 
 Não presumir que ausência de cookies significa ausência de tratamento de dados. Uma política de privacidade pública que explique hospedagem, medição e contato por WhatsApp continua pendente. O Segundo Cérebro contém o procedimento “Cookies e Privacidade em Sites”, obrigatório no planejamento, antes/depois da publicação e ao mudar integrações.
 
-A branch desta revisão é `codex/digiprot-cinematic`. O deploy automático documentado depende de `main`; esta validação local não confirma uma nova publicação. Não houve novo Lighthouse nem medição de campo nesta rodada.
+Esta revisão foi integrada em `main` e enviada em 2026-10-14 no commit `79253ab`. A publicação foi confirmada no domínio: `/` e `/exemplos/` responderam HTTP 200 com a chamada “Explorar exemplos” e os textos atualizados da galeria. O identificador interno da versão no painel Cloudflare não foi consultado. Não houve novo Lighthouse nem medição de campo nesta rodada.
 
 ## Histórico: estado verificado em 2026-10-11
 
