@@ -48,6 +48,8 @@ Há rolagem nativa, foco visível, link para pular ao conteúdo, menu móvel nat
 
 ## Antes de publicar
 
+Inclua a avaliação de cookies, dados pessoais e fornecedores antes de publicar e repita no domínio real. Mudanças em analytics, pixels, formulários, conteúdo incorporado ou hospedagem exigem nova avaliação. A existência do site, por si só, não determina a necessidade de banner.
+
 O domínio canônico está configurado como `https://digiprot.com.br/`. O build inclui canonical por página, Open Graph, Twitter Cards, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt` e versões Markdown das duas páginas. Rode `npm run build` e `npm run check:seo` antes de publicar.
 
 O Worker redireciona permanentemente `www.digiprot.com.br` para `https://digiprot.com.br`, preservando o caminho e os parâmetros da URL.
@@ -64,7 +66,23 @@ O deploy publica o conteúdo de `dist/`, incluindo `/exemplos/`, `_redirects`, `
 
 Um push para `main` dispara a publicação automática. Confirme o sucesso no Cloudflare e confira o domínio; um push aceito pelo GitHub não garante que o deploy tenha terminado.
 
-## Estado verificado em 2026-10-11
+## Estado verificado em 2026-10-12
+
+A ação principal da home é “Explorar exemplos”. A galeria mantém oito marcas fictícias, agora com composições e conteúdo próprios: títulos, serviços, apresentação e destaques de cada negócio. Navegação e rodapé usam a âncora `#colecao`. Os textos gerais e as versões Markdown foram revisados; pequenas chamadas decorativas acima dos títulos foram removidas por preferência do usuário.
+
+A rodada corrigiu o cabeçalho e as colunas de serviços das prévias de computador em telas pequenas. `npm run build`, `npm run check:seo`, `npm run check:performance` e `git diff --check` passaram. A home entrega 30,5 KiB de CSS inicial e 144,9 KiB de JavaScript inicial gzip.
+
+As duas páginas foram conferidas entre 320 e 1440px. Passaram 48 combinações dos oito exemplos com movimento reduzido, além dos filtros, teclado, retorno de foco, navegação interna, menu móvel, abas de clientes e conteúdo sem JavaScript. Não foram observados erros JavaScript ou falhas de requisição nos testes locais. Resultados, ambiente e limites em [docs/site-review-2026-10-12.md](docs/site-review-2026-10-12.md), com [dados das prévias e interações](docs/site-review-2026-10-12.json).
+
+### Cookies e privacidade
+
+O build local não criou cookies nem entradas em `localStorage` ou `sessionStorage` nas visitas testadas. Na versão publicada inspecionada nesta sessão, o Cloudflare injeta seu Web Analytics, que [não usa armazenamento no navegador](https://developers.cloudflare.com/speed/observatory/rum-beacon/). Não foram observados cookies nessas visitas ao domínio. A avaliação atual mantém o site sem banner de consentimento; deve ser refeita quando os recursos mudarem.
+
+Não presumir que ausência de cookies significa ausência de tratamento de dados. Uma política de privacidade pública que explique hospedagem, medição e contato por WhatsApp continua pendente. O Segundo Cérebro contém o procedimento “Cookies e Privacidade em Sites”, obrigatório no planejamento, antes/depois da publicação e ao mudar integrações.
+
+A branch desta revisão é `codex/digiprot-cinematic`. O deploy automático documentado depende de `main`; esta validação local não confirma uma nova publicação. Não houve novo Lighthouse nem medição de campo nesta rodada.
+
+## Histórico: estado verificado em 2026-10-11
 
 A home apresenta os dois clientes reais, serviços e contato, sem a galeria conceitual. Foram ajustados tipografia, espaçamento, botões, enquadramento do hero, fundos dos projetos e animações do contato e rodapé. Os estudos foram concentrados em `/exemplos/` para dar espaço às prévias e manter a principal focada nos trabalhos entregues.
 

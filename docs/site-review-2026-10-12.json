@@ -1,0 +1,584 @@
+{
+  "date": "2026-10-12",
+  "environment": {
+    "build": "Vite Preview",
+    "origin": "http://127.0.0.1:5174",
+    "browser": "Chromium automatizado",
+    "physicalDevice": false
+  },
+  "previewMatrix": {
+    "results": [
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 1440,
+        "format": "desktop",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 768,
+        "format": "desktop",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "desktop",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 390,
+        "format": "mobile",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "desktop",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-restaurante",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-arquitetura",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-bicicletas",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-estetica",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-confeitaria",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-barbearia",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-climatizacao",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      },
+      {
+        "width": 320,
+        "format": "mobile",
+        "name": "demo-site demo-contabilidade",
+        "overflow": false,
+        "services": 3,
+        "empty": false,
+        "clippedNav": [],
+        "focusReturned": true
+      }
+    ],
+    "errors": []
+  },
+  "interactionChecks": {
+    "menuOpened": true,
+    "menuClosed": true,
+    "menuFocus": true,
+    "projects": [
+      {
+        "selected": "true",
+        "panelVisible": true
+      },
+      {
+        "selected": "true",
+        "panelVisible": true
+      }
+    ],
+    "smoke": [
+      {
+        "name": "restaurante",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "arquitetura",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "loja de bicicletas",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "estética e bem-estar",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "confeitaria",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "barbearia",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "ar-condicionado",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      },
+      {
+        "name": "contabilidade",
+        "trapped": true,
+        "mobile": "mobile",
+        "focus": true
+      }
+    ],
+    "storage": {
+      "cookieNames": [],
+      "localKeys": [],
+      "sessionKeys": []
+    },
+    "staticPages": [
+      {
+        "route": "/",
+        "h1": "Seu negócio\nem foco.",
+        "clients": 2,
+        "models": 0,
+        "cardsVisible": true,
+        "overflow": false
+      },
+      {
+        "route": "/exemplos/",
+        "h1": "Qual estilo combina\ncom seu negócio?",
+        "clients": 0,
+        "models": 8,
+        "cardsVisible": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  }
+}
